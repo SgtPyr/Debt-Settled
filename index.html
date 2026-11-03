@@ -1,699 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A record of a fully settled personal debt.">
+  <meta name="theme-color" content="#f5f7f4">
 
-    <meta charset="UTF-8">
+  <title>Debt Settled | Your Debt</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <meta
-        name="description"
-        content="A personal reminder regarding an outstanding debt."
-    >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <title>Friendly Reminder</title>
-
-
-    <!-- GOOGLE FONTS -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- CSS -->
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 
 <body>
 
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-    <!-- BACKGROUND GLOW -->
+  <header class="site-header">
 
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
-    <div class="background-glow glow-three"></div>
+    <a class="brand" href="#">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="m5 12.5 4.2 4.2L19.5 6.8"
+            stroke="currentColor"
+            stroke-width="2.3"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+        </svg>
+      </span>
 
+      <span>Your Debt</span>
+    </a>
 
+    <span class="header-status">
+      <span class="status-dot"></span>
+      Account settled
+    </span>
 
-    <!-- HEADER -->
+  </header>
 
-    <header class="site-header">
+  <main>
 
-        <a
-            href="#"
-            class="brand"
-        >
-            Friendly Reminder
-        </a>
+    <section class="hero">
 
+      <div class="completion-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="m13 24.5 7.2 7.2L35.5 16"
+            stroke="currentColor"
+            stroke-width="3.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+          <circle cx="24" cy="24" r="21"
+            stroke="currentColor"
+            stroke-width="1.5"
+            opacity=".22"/>
+        </svg>
+      </div>
 
-        <div class="header-note">
+      <div class="eyebrow">
+        <span></span>
+        PAYMENT COMPLETED
+        <span></span>
+      </div>
 
-            Friendly Reminder
+      <h1>
+        All settled.<br>
+        <span>Nothing left to pay.</span>
+      </h1>
 
-            <span>♡</span>
+      <p class="hero-copy">
+        The debt has been fully paid.
+        This page is now a record of the completed transaction.
+      </p>
+
+      <article class="balance-card">
+
+        <div class="balance-top">
+
+          <span class="balance-label">
+            REMAINING BALANCE
+          </span>
+
+          <span class="paid-chip">
+            <span>✓</span>
+            PAID IN FULL
+          </span>
 
         </div>
 
-    </header>
-
-
-
-    <main>
-
-
-        <!-- HERO -->
-
-        <section class="hero">
-
-
-            <div class="eyebrow">
-                HEY.
-            </div>
-
-
-            <h1>
-                Just checking in about the money you borrowed.
-            </h1>
-
-
-            <p class="hero-description">
-
-                Just a little reminder about the money you borrowed from me.
-                Whenever you have the chance, I’d really appreciate it if you
-                could settle the remaining balance.
-
-            </p>
-
-
-
-            <!-- BALANCE CARD -->
-
-            <div class="balance-card">
-
-
-                <div class="balance-label">
-                    OUTSTANDING BALANCE
-                </div>
-
-
-                <div class="balance">
-                    ₱1,000.00
-                </div>
-
-
-                <div class="borrowed-time">
-
-                    <span>◷</span>
-
-                    It has been
-
-                    <strong id="daysSince"></strong>
-
-                    since you borrowed it.
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- PAY BUTTON -->
-
-            <button
-                class="pay-button"
-                id="payButton"
-            >
-
-                PAY NOW
-
-                <span>→</span>
-
-            </button>
-
-
-        </section>
-
-
-
-        <!-- PAYMENT SECTION -->
-
-        <section
-            class="payment-section"
-            id="paymentSection"
-        >
-
-
-            <!-- SECTION HEADING -->
-
-            <div class="section-heading">
-
-
-                <div>
-
-                    <h2>
-                        Choose how you'd like to pay
-                    </h2>
-
-
-                    <p>
-                        Scan the QR code or use the details below
-                        to send your payment. Thank you!
-                    </p>
-
-                </div>
-
-
-
-                <!-- PAYMENT TABS -->
-
-                <div class="payment-tabs">
-
-
-                    <!-- GCASH -->
-
-                    <button
-                        type="button"
-                        class="payment-tab active"
-                        data-method="gcash"
-                    >
-
-                        <span class="method-icon gcash-icon">
-                            G
-                        </span>
-
-                        GCash
-
-                    </button>
-
-
-
-                    <!-- MAYA -->
-
-                    <button
-                        type="button"
-                        class="payment-tab"
-                        data-method="maya"
-                    >
-
-                        <span class="method-icon maya-icon">
-                            M
-                        </span>
-
-                        Maya
-
-                    </button>
-
-
-
-                    <!-- PAYPAL -->
-
-                    <button
-                        type="button"
-                        class="payment-tab"
-                        data-method="paypal"
-                    >
-
-                        <span class="method-icon paypal-icon">
-                            P
-                        </span>
-
-                        PayPal
-
-                    </button>
-
-
-
-                    <!-- TIKTOK -->
-
-                    <button
-                        type="button"
-                        class="payment-tab"
-                        data-method="tiktok"
-                    >
-
-                        <span class="method-icon tiktok-icon">
-                            ♪
-                        </span>
-
-                        TikTok
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PAYMENT CARD -->
-
-            <div class="payment-card">
-
-
-                <!-- MAIN PAYMENT AREA -->
-
-                <div class="payment-main">
-
-
-                    <!-- PAYMENT TITLE -->
-
-                    <div class="payment-title">
-
-
-                        <div
-                            class="large-method-icon"
-                            id="largeMethodIcon"
-                        >
-                            G
-                        </div>
-
-
-                        <div>
-
-                            <h3 id="paymentName">
-                                GCash
-                            </h3>
-
-
-                            <p id="paymentSubtitle">
-                                Scan. Pay. Done.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PAYMENT CONTENT -->
-
-                    <div class="payment-content">
-
-
-                        <!-- QR -->
-
-                        <div class="qr-container">
-
-
-                            <div class="qr-frame">
-
-
-                                <img
-                                    id="qrImage"
-                                    src="images/gcash-qr.png"
-                                    alt="GCash QR Code"
-                                >
-
-
-                                <div
-                                    id="qrPlaceholder"
-                                    class="qr-placeholder"
-                                >
-
-                                    <span>
-                                        QR
-                                    </span>
-
-                                    <small>
-                                        Your QR code
-                                    </small>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <p
-                                class="qr-caption"
-                                id="qrCaption"
-                            >
-                                Scan to pay
-                            </p>
-
-
-                        </div>
-
-
-
-                        <!-- DETAILS -->
-
-                        <div class="payment-details">
-
-
-                            <!-- ACCOUNT / DISPLAY NAME -->
-
-                            <div class="detail-row">
-
-
-                                <div
-                                    class="detail-icon"
-                                    id="nameDetailIcon"
-                                >
-                                    ♙
-                                </div>
-
-
-                                <div>
-
-                                    <span id="nameLabel">
-                                        Account Name
-                                    </span>
-
-
-                                    <strong id="accountName">
-                                        Wilson M.
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-
-                            <div class="detail-divider"></div>
-
-
-
-                            <!-- ACCOUNT NUMBER / USERNAME -->
-
-                            <div class="detail-row">
-
-
-                                <div class="detail-icon">
-                                    #
-                                </div>
-
-
-                                <div>
-
-                                    <span id="accountLabel">
-                                        GCash Number
-                                    </span>
-
-
-                                    <strong id="accountNumber">
-                                        0912 605 6886
-                                    </strong>
-
-                                </div>
-
-
-                                <button
-                                    type="button"
-                                    class="copy-button"
-                                    id="copyButton"
-                                >
-                                    Copy
-                                </button>
-
-
-                            </div>
-
-
-
-                            <div class="detail-divider"></div>
-
-
-
-                            <!-- AMOUNT -->
-
-                            <div
-                                class="detail-row"
-                                id="amountRow"
-                            >
-
-
-                                <div class="detail-icon">
-                                    ₱
-                                </div>
-
-
-                                <div>
-
-                                    <span>
-                                        Amount
-                                    </span>
-
-
-                                    <strong>
-                                        ₱1,000.00
-                                    </strong>
-
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- ALTERNATIVE / PROFILE ACTION -->
-
-                <div class="alternate-payment">
-
-
-                    <div
-                        class="alternate-icon"
-                        id="alternateIcon"
-                    >
-                        G
-                    </div>
-
-
-                    <p id="alternateText">
-
-                        Or you can also<br>
-
-                        <strong id="alternateMethod">
-                            pay via GCash
-                        </strong>
-
-                    </p>
-
-
-                    <button
-                        type="button"
-                        class="account-pill"
-                        id="accountPill"
-                    >
-
-                        <span id="pillText">
-                            0912 605 6886
-                        </span>
-
-
-                        <span id="pillAction">
-                            ⧉
-                        </span>
-
-                    </button>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- LOWER SECTION -->
-
-        <section class="lower-section">
-
-
-            <!-- DEBT SUMMARY -->
-
-            <div class="summary-card">
-
-
-                <h2>
-                    Debt Summary
-                </h2>
-
-
-                <div class="summary-row">
-
-                    <span>
-                        Original Amount
-                    </span>
-
-                    <strong>
-                        ₱1,000.00
-                    </strong>
-
-                </div>
-
-
-                <div class="summary-row">
-
-                    <span>
-                        Amount Paid
-                    </span>
-
-                    <strong>
-                        ₱0.00
-                    </strong>
-
-                </div>
-
-
-                <div class="summary-row remaining">
-
-                    <span>
-                        Remaining Balance
-                    </span>
-
-                    <strong>
-                        ₱1,000.00
-                    </strong>
-
-                </div>
-
-
-                <div class="summary-divider"></div>
-
-
-                <div class="borrowed-date">
-
-                    <span>
-                        ▣
-                    </span>
-
-
-                    <span>
-                        Borrowed on
-                    </span>
-
-
-                    <strong>
-                        July 29, 2026
-                    </strong>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- MESSAGE -->
-
-            <div class="message-card">
-
-
-                <div class="heart">
-                    ♡
-                </div>
-
-
-                <p>
-
-                    Just a little reminder about the money you borrowed.
-
-                    Whenever you have the chance, I’d really appreciate it
-                    if you could settle the remaining ₱1,000.
-
-                </p>
-
-
-                <p>
-
-                    Thank you for understanding and taking the time to settle it.
-
-                </p>
-
-
-                <div class="signature">
-                    — Thanks!
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-
-
+        <div class="balance-amount">
+          ₱0.00
+        </div>
+
+        <div class="balance-foot">
+          <span class="mini-check">✓</span>
+          <span>Your balance is cleared.</span>
+        </div>
+
+        <div class="progress-track">
+          <span></span>
+        </div>
+
+        <div class="progress-caption">
+          <span>Payment progress</span>
+          <strong>100%</strong>
+        </div>
+
+      </article>
+
+      <div class="completion-note">
+        <span class="note-icon">✓</span>
         <span>
-            settle-up
+          This debt is marked as <strong>completed</strong>.
+        </span>
+      </div>
+
+    </section>
+
+    <section class="details-section">
+
+      <div class="section-intro">
+
+        <span class="section-kicker">
+          PAYMENT RECORD
         </span>
 
+        <h2>A clear record of settlement.</h2>
 
-        <span>
-            This page was made specifically for you.
+        <p>
+          The original amount and its completed payment
+          are summarized below.
+        </p>
+
+      </div>
+
+      <div class="record-card">
+
+        <div class="record-heading">
+
+          <div>
+            <span class="record-label">DEBT SUMMARY</span>
+            <h3>Payment overview</h3>
+          </div>
+
+          <span class="record-status">
+            <span></span>
+            Settled
+          </span>
+
+        </div>
+
+        <div class="record-rows">
+
+          <div class="record-row">
+            <span>Original amount</span>
+            <strong>₱1,000.00</strong>
+          </div>
+
+          <div class="record-row">
+            <span>Total amount paid</span>
+            <strong class="paid-amount">₱1,000.00</strong>
+          </div>
+
+          <div class="record-row balance-row">
+            <span>Remaining balance</span>
+            <strong>₱0.00</strong>
+          </div>
+
+        </div>
+
+        <div class="record-divider"></div>
+
+        <div class="date-row">
+
+          <span class="date-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="3.5" y="5" width="17" height="15.5"
+                rx="2.5"
+                stroke="currentColor"
+                stroke-width="1.6"/>
+              <path d="M7.5 3.5v3M16.5 3.5v3M3.5 9.5h17"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"/>
+            </svg>
+          </span>
+
+          <span>
+            <small>Originally borrowed</small>
+            <strong>July 29, 2026</strong>
+          </span>
+
+        </div>
+
+      </div>
+
+      <aside class="thank-you-card">
+
+        <div class="thank-you-mark">✳</div>
+
+        <span class="section-kicker">
+          CLOSING NOTE
         </span>
 
+        <h2>One Last Thing...</h2>
 
-        <span>
-            Thank you. ♡
-        </span>
+        <p>
+          Now that everything's settled, I guess there's one thing left to ask.
+          So, when are we going fishing? It's been a while, and I think it's about time we planned another trip. We can enjoy the fresh air, find a good fishing spot, and spend some time by the water.
+          No rush, though. Just let me know when you're free. 
+        </p>
 
+        <div class="signature">
+          — Wilson
+        </div>
 
-    </footer>
+      </aside>
 
+    </section>
 
+  </main>
 
-    <!-- TOAST -->
+  <footer class="site-footer">
 
-    <div
-        class="toast"
-        id="toast"
-    >
-        Copied to clipboard
-    </div>
+    <span class="footer-brand">
+      Your Debt
+    </span>
 
+    <span>
+      Personal payment record
+    </span>
 
+    <span class="footer-complete">
+      <span></span>
+      Fully settled
+    </span>
 
-    <!-- JAVASCRIPT -->
+  </footer>
 
-    <script src="js/app.js"></script>
-
+  <script src="js/app.js"></script>
 
 </body>
-
 </html>
